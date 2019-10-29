@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Menu extends React.Component {
+class Home extends .React.Component {
   render(){
     return (
         <div className="menu">
@@ -21,4 +21,4 @@ class Menu extends React.Component {
 
 }
 
-export default Menu;
+export default Home;

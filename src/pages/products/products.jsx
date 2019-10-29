@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProductItem from './productItem'
 
-class Products extends Component {
+class Products extends React.Component {
   render(){
     return (
         <div className="products">

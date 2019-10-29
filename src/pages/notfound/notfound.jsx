@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Menu extends React.Component {
+class NotFound extends Component {
   render(){
     return (
         <div className="menu">
@@ -18,7 +18,6 @@ class Menu extends React.Component {
         </div>
     );
   }
-
 }
 
-export default Menu;
+export default NotFound;
