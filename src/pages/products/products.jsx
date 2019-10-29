@@ -24,7 +24,7 @@ class Products extends React.Component {
                           </tr>
                         </thead>
                         <tbody>
-                            <ProductItem></ProductItem>
+                           {this.props.children}
                         </tbody>
                       </table>
 

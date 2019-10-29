@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Menu from './share/menu/menu';
-import ProductsContainer from './pages/products/products-container';
+// import ProductsContainer from './pages/products/products-container';
 
 class App extends React.Component {
   render(){
@@ -12,7 +12,7 @@ class App extends React.Component {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <button type="button" className="btn btn-info">Add product</button>
-               <ProductsContainer />
+               {/* <ProductsContainer /> */}
             </div>
           </div>
           </div>
