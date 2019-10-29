@@ -3,6 +3,8 @@ import ProductItem from './productItem'
 
 class Products extends React.Component {
   render(){
+  console.log(this.props.children)
+
     return (
         <div className="products">
 
