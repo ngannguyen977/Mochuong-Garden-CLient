@@ -9,19 +9,6 @@ class ProductsContainer extends React.Component {
     console.log(products)
     return (
         <div>
-            <div className="menu">
-                <div className="navbar">
-                    <a className="navbar-brand">call API</a>
-                    <ul className="nav navbar-nav">
-                    <li className="active">
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Products</a>
-                    </li>
-                    </ul>
-            </div>
-            </div>
             <Products>
                 {this.showProducts(products)}
             </Products>
@@ -45,7 +32,7 @@ class ProductsContainer extends React.Component {
 
 const mapStateToProps = state =>{
     return {
-        products : state.products
+        products : state.productReducer
     }
 }
 export default connect(mapStateToProps, null)(ProductsContainer);

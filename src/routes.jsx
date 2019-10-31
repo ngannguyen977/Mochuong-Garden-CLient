@@ -1,6 +1,6 @@
 import React from 'react';
 import Products from './pages/products/products';
-import ProductItem from './pages/products/productItem'
+import ProductActions from './pages/product-actions/productAddPage'
 
 const routes = [
     {
@@ -14,6 +14,16 @@ const routes = [
         main:() =><Products />
     },
     {
+        path: '/products/:id/edit',
+        exact: false,
+        main:(match) =><Products match ={match} />
+    },
+    {
+        path: '/product/add',
+        exact: false,
+        main:() =><ProductActions />
+    },
+    {
         path: '',
         exact: false,
         main:() =><notFound />
@@ -21,3 +31,4 @@ const routes = [
     
 ]
 export default routes;
+// match khi có id trên URL

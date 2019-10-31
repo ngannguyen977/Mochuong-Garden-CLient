@@ -3,8 +3,6 @@ import ProductItem from './productItem'
 
 class Products extends React.Component {
   render(){
-  console.log(this.props.children)
-
     return (
         <div className="products">
 
@@ -17,7 +15,6 @@ class Products extends React.Component {
                       <table className="table table-bordered table-hover">
                         <thead>
                           <tr>
-                            <th>STT</th>
                             <th>Ma SP</th>
                             <th>Ten</th>
                             <th>Gia</th>
