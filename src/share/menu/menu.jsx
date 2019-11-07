@@ -15,7 +15,6 @@ const menus = [
 ]
 const MenuLink = ({label,to, acticOnlyWhenExact})=>{
   return (
-	<BrowserRouter>
 		<Route 
 		path ={to}
 		exact={acticOnlyWhenExact}
@@ -30,7 +29,6 @@ const MenuLink = ({label,to, acticOnlyWhenExact})=>{
 			)
 		}}
 		/>
-	</BrowserRouter>
   )
 }
 class Menu extends React.Component {

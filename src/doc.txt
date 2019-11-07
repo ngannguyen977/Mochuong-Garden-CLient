@@ -1,0 +1,16 @@
+pages:
+    home
+    products
+        productsList
+        productsItem
+        productsDetail
+        productCategories
+        productCategoriesItem
+    cayquanhnha
+        gioithieu
+        huongdandathang
+        cachthucthanhtoan
+        chinhsachgiaohang
+        lienhe
+    cart
+        thongtindonhang

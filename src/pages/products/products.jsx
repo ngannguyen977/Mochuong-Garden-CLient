@@ -11,6 +11,7 @@ class Products extends React.Component {
                       <h3 className="panel-title">List products</h3>
                     </div>
                     <div className="panel-body">
+                <button type="button" className="btn btn-info">Add product</button>
 
                       <table className="table table-bordered table-hover">
                         <thead>

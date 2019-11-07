@@ -1,6 +1,8 @@
 import React from 'react';
 import Home from './pages/home/home';
+import NotFound from './pages/notfound/notfound';
 import Products from './pages/products/products';
+import ProductsContainer from './pages/products/products-container';
 import ProductActions from './pages/product-actions/productAddPage'
 
 const routes = [
@@ -12,12 +14,12 @@ const routes = [
     {
         path: '/products',
         exact: false,
-        main:() =><Products />
+        main:({match}) =><ProductsContainer match={match}/>
     },
     {
         path: '/products/:id/edit',
         exact: false,
-        main:(match) =><Products match ={match} />
+        main:({match}) =><Products match ={match} />
     },
     {
         path: '/product/add',
@@ -27,7 +29,7 @@ const routes = [
     {
         path: '',
         exact: false,
-        main:() =><notFound />
+        main:() =><NotFound />
     },
     
 ]
