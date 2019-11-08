@@ -1,6 +1,6 @@
 import React from 'react';
 import banner from "../../img/main-banner.jpg";
-import ProductCategories from '../product-categories/product-categories'
+import ProductCategoriesContainer from '../product-categories/product-categories-container';
 
 class Home extends React.Component {
   render(){
@@ -9,8 +9,8 @@ class Home extends React.Component {
             <div className="banner"></div>
             <div className= "container">
 				<img className="img-responsive" src={banner} alt="" />
-				<div classname ="product-categories">
-					<ProductCategories />
+				<div className ="product-categories">
+          <ProductCategoriesContainer />
 				</div>
             </div>
         </div>

@@ -1,11 +1,21 @@
 {
-  "products": [
-      {
-          "id": 1,
-          "name": "iphone x",
-          "price":500,
-          "status":true
-
-      }
-  ]
+    "products": [{
+            "sku": "thaomoc",
+            "name": "cây huong thảo",
+            "price": 500,
+            "status": true
+        },
+        {
+            "sku": "senda",
+            "name": "sen đá móng rồng",
+            "price": 500,
+            "status": true
+        },
+        {
+            "sku": "hoahong",
+            "name": "hoa hồng cổ Huế",
+            "price": 500,
+            "status": true
+        }
+    ]
 }

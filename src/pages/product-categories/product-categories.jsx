@@ -4,8 +4,8 @@ class ProductCategories extends React.Component {
   render(){
     return (
         <div className="">
-            <div classname= "container">
-            
+            <div className= "container">
+              {this.props.children}
             </div>
         </div>
     );
