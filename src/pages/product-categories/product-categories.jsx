@@ -5,7 +5,9 @@ class ProductCategories extends React.Component {
     return (
         <div className="">
             <div className= "container">
+              <div className="flex-content">
               {this.props.children}
+              </div>
             </div>
         </div>
     );
