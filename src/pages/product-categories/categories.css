@@ -1,3 +1,33 @@
 .flex-content {
     display: flex;
+    margin-left: -30px;
+}
+
+.product-categories {
+    margin-top: 20px
+}
+
+.quantity {
+    color: #777
+}
+
+.product-categories-item {
+    display: flex;
+    border-radius: 80px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.product-categories-item img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    ;
+}
+
+.product-categories-item h4 {
+    font-size: 16px;
+    color: #856845;
 }

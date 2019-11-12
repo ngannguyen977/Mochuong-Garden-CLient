@@ -1,0 +1,38 @@
+.menu {
+    display: flex;
+    margin-top: 20px;
+}
+
+.menu .nav li a {
+    color: #856845;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.menu .navbar-brand {
+    margin-top: 0;
+    border-right: 1px solid #cad1d0;
+}
+
+.menu .navbar-brand img {
+    position: relative;
+    z-index: 99;
+    top: -30px;
+    width: 80%;
+}
+
+.contact-socials ul li {
+    list-style: none;
+    float: left;
+}
+
+.contact-socials {
+    margin-left: auto;
+    display: inline-block;
+}
+
+.contact-socials img {
+    width: 30px;
+    float: left;
+    margin-right: 20px;
+}

@@ -4,7 +4,6 @@ class Products extends React.Component {
   render(){
     return (
         <div className="products">
-
             <div className="panel panel-primary">
                     <div className="panel-heading">
                       <h3 className="panel-title">List products</h3>
