@@ -5,6 +5,7 @@ import ProductItem from './productItem';
 
 class ProductsContainer extends React.Component {
   render(){
+    
     var {products} = this.props;
     console.log(products)
     return (

@@ -1,3 +1,17 @@
 .product-page-list {
     margin-top: 20px;
 }
+
+a,
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.product-page-list h4 {
+    color: #00634f;
+}
+
+.product-page-item {
+    min-height: 400px;
+}

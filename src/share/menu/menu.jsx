@@ -44,16 +44,25 @@ class Menu extends React.Component {
                 <ul className="nav navbar-nav">
 					{this.showMenus(menus)}
                 </ul>
-          </div>
-		  <div className="contact-socials">
+          	</div>
+			  <div className="search">
+				<div className="search-box">
+					<form className="search-form">
+						<input className="form-control" placeholder='' type='text' />
+						<button className="btn btn-link search-btn">
+							<i className="glyphicon glyphicon-search"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+		  	<div className="contact-socials">
 				<ul>
 					<li><img className="img-responsive" src={fb} alt="" /><span>Fanpage</span></li>
 					<li><img className="img-responsive" src={ship} alt="" /><span>Vận chuyển</span></li>
 					<li><img className="img-responsive" src={cart} alt="" /><span>Giỏ hàng</span></li>
-
 				</ul>
 		  </div>
-        </div>
+		</div>
     );
   	}
 	showMenus = (menus)=>{

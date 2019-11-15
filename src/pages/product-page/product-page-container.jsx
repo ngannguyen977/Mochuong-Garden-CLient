@@ -5,8 +5,20 @@ import ProductPageItem from './product-page-item';
 import "./product-page.css";
 
 class ProductsPageContainer extends React.Component {
+    // componentWillMount(){
+    //     this.props.getProductListPage();
+    // }
   render(){
-    var {products} = this.props
+    // const PAGESIZE = 3;
+    // var {products} = [];
+    var {products, pageIndex, totalPage} = this.props;
+
+    let pagination = []
+    // for (let i = 0; i < totalPage/PAGESIZE; i++) {
+    //     pagination.push(<li key={i} className={pageIndex === i ? "active" : "inactive"}>
+    //             <a onClick={() => this.props.getProductListPage(i, PAGESIZE)}>{i+1}</a>
+    //         </li>)
+    // }
     return (
         <div className="product-page-list">
             <ProductPageList>
@@ -29,6 +41,12 @@ class ProductsPageContainer extends React.Component {
   }
 
 }
+
+// const mapDispatchToProps = dispatch =>{
+//     return {
+//         getProductListPage : (pageIndex, PageSize) =>dispatch(actGetProductsRequest(pageIndex, PageSize))
+//     }
+// }
 const mapStateToProps = state =>{
     return {
         products:state.productPageListReducer

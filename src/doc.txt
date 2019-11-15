@@ -14,3 +14,7 @@ pages:
         lienhe
     cart
         thongtindonhang
+Giả lập API:
+ - json server (offline)
+ - hoac mock API (online)
+và test trên postman
