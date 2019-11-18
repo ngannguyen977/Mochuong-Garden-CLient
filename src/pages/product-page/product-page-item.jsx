@@ -1,10 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class ProductsPageItem extends React.Component {
+class ProductPageItem extends React.Component {
     
   render(){
     var {product} = this.props
+    console.log("produt item",this.props)
     return (
             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 product-page-item">
                <Link to={'/productDetail/'+product.id}>
@@ -19,4 +20,4 @@ class ProductsPageItem extends React.Component {
 
 }
 
-export default ProductsPageItem;
+export default ProductPageItem;

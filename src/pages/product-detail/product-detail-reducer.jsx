@@ -1,5 +1,5 @@
 import callApi from '../../util/apiCall';
-import {API_URL} from '../../constants/config';
+import * as Types from '../../constants/actionTypes'
 
 
 export const actGetProductByIdRequest = (id) => {
@@ -12,14 +12,14 @@ export const actGetProductByIdRequest = (id) => {
 ////
 export const actGetProductById = (data) => {
     return {
-        type: Types.GET_PRODUCT_CATEGORY,
+        type: Types.GET_PRODUCT_DETAIL,
         dataOfProductDetail: data
     }
 }
 
-const ProductPageDetailReducer = () =>{
-    switch(ProductActions.type){
+const initialState =[];
+export default function ProductPageDetailReducer(state=initialState,action ){
+    switch(action.type){
         default: return [...state]
     }
 }
-export default ProductPageDetailReducer;
