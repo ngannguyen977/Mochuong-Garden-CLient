@@ -3,7 +3,8 @@ import Home from './pages/home/home';
 import NotFound from './pages/notfound/notfound';
 import Products from './pages/products/products';
 import ProductsContainer from './pages/products/products-container';
-import ProductActions from './pages/product-actions/productAddPage'
+import ProductActions from './pages/product-actions/productAddPage';
+import ProductDetail from './pages/product-detail/product-detail'
 
 const routes = [
     {
@@ -20,6 +21,11 @@ const routes = [
         path: '/products/:id/edit',
         exact: false,
         main:({match}) =><Products match ={match} />
+    },
+    {
+        path: '/productDetail/:id',
+        exact: false,
+        main:({match}) =><ProductDetail match ={match} />
     },
     {
         path: '/product/add',

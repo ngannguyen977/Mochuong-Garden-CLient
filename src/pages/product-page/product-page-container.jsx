@@ -3,17 +3,39 @@ import {connect} from 'react-redux';
 import ProductPageList from './product-page-list';
 import ProductPageItem from './product-page-item';
 import "./product-page.css";
+import callApi from './../../util/apiCall';
 
 class ProductsPageContainer extends React.Component {
-    // componentWillMount(){
-    //     this.props.getProductListPage();
-    // }
-  render(){
-    // const PAGESIZE = 3;
-    // var {products} = [];
-    var {products, pageIndex, totalPage} = this.props;
+    //tao ra state
+    constructor(props){
+        super(props);
+        this.state ={
+            //để đổ data vào biến products trong state này
+            // để biến products trong render lấy
+            products: []
+        }
+    }
+    //goi len server trong lifecircle hook
+    //sau khi render đầu tiên sẽ set lai state products trên constructor
+    componentDidMount(){
+        //goi callApi
+        //ko get gi len het nen de data null
 
-    let pagination = []
+        //khi da nhan duoc res tu server tra về thì setState lại
+        callApi('products', 'GET', null).then(res=>{
+            this.setState({
+                products: res.data
+            })
+        })
+    }
+  render(){
+    console.log("render")
+    // const PAGESIZE = 3;
+    var {products} = this.state
+    
+    //var {products, pageIndex, totalPage} = this.props;
+
+    //let pagination = []
     // for (let i = 0; i < totalPage/PAGESIZE; i++) {
     //     pagination.push(<li key={i} className={pageIndex === i ? "active" : "inactive"}>
     //             <a onClick={() => this.props.getProductListPage(i, PAGESIZE)}>{i+1}</a>

@@ -18,3 +18,13 @@ Giả lập API:
  - json server (offline)
  - hoac mock API (online)
 và test trên postman
+
+ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ
+Render giao dien chỉ mất 1s trong khi
+gọi lên server lấy data mất 5s
+-> SỬ DỤNG LIFECIRCLE HOOK
+componentwillmount/ didmount....
+
+note: componentdidmount : lần đầu tiên render products sẽ rỗng
+-> dùng lifecircle hook gọi lên server lấy data 
+->setState , lúc này đã có dữ liệu -> render sẽ chạy lại lần nữa

@@ -7,7 +7,7 @@ class ProductCategoriesContainer extends React.Component {
   render(){
     //   console.log('product', products)
     var {productCategories} = this.props;
-    console.log("co san pham chua",this.props)
+    // console.log("co san pham chua",this.props)
     return (
         <div>
             <ProductCategories>
