@@ -40,7 +40,7 @@ class Menu extends React.Component {
     return (
         <div className="menu">
             <div className="navbar">
-                <a className="navbar-brand"><img className="img-responsive" src={logo} alt="" /></a>
+                <Link to={'/'} className="navbar-brand"><img className="img-responsive" src={logo} alt="" /></Link>
                 <ul className="nav navbar-nav">
 					{this.showMenus(menus)}
                 </ul>

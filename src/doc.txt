@@ -28,3 +28,6 @@ componentwillmount/ didmount....
 note: componentdidmount : lần đầu tiên render products sẽ rỗng
 -> dùng lifecircle hook gọi lên server lấy data 
 ->setState , lúc này đã có dữ liệu -> render sẽ chạy lại lần nữa
+
+// chạy render đầu tiên ko có du lieu -> chạy vào didmount (gọi hàm getProductPageListFromStore) 
+//->call Api trong product-page-reducer -> render lại

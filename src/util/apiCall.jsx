@@ -14,4 +14,4 @@ import * as config from './../constants/config.jsx';
         console.log(err);
     })
  }
- // -> su dung caLLApi() tại product-page-container
+ // -> su dung caLLApi() tại product-page-reducer
