@@ -11,15 +11,9 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Menu />
-            <div className="container">
-                <div className="row">
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <Switch>
-                    {this.showContentMenus(routes)}
-                </Switch>
-                </div>
-            </div>
-          </div>
+            <Switch>
+                {this.showContentMenus(routes)}
+            </Switch>
       </div>
       </Router>
     );

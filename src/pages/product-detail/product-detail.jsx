@@ -1,11 +1,13 @@
 import React from 'react';
+import * as Message from '../../constants/message';
+import MessageComponent from '../../share/messages/message'
 
 class ProductDetail extends React.Component {
     componentDidMount(){
         // lấy id trên URL để show detail của id đó
         let id = this.props.match.params.id
         this.props.getProductDetailFromStore(id)
-        console.log("lấy param id", this.props)
+        // console.log("lấy param id", this.props)
     }
     render() {
         let {itemDetail} = this.props
@@ -21,7 +23,6 @@ class ProductDetail extends React.Component {
                         <table className="table">
                             
                             <thead>THÔNG TIN SẢN PHẨM</thead>
-                            
                             <tbody>
                                 <tr>
                                     <td>Mã SP</td>
@@ -45,11 +46,19 @@ class ProductDetail extends React.Component {
                                 </tr>
                             </tbody>
                         </table>
+                        <a className="btn"
+                        onClick={()=>this.onAddToCart(itemDetail)}
+                        >Mua Hàng</a>
                     </div>
                 </div>
                 <div className="clearfix"></div>
+                <MessageComponent />
             </div>
         );
+    }
+    onAddToCart =(product)=>{
+        this.props.onAddToCart(product)
+        this.props.onAddMessage(Message.MSG_ADD_SUCCESS)
     }
 
 }

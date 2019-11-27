@@ -35,8 +35,14 @@ export const actGetProductById = (data) => {
         dataOfProductDetail: data
     }
 }
-
-
+// //SHOPPING CART
+// export const actAddToCart =(product, quantity)=>{
+//     return{
+//         type:Types.ADD_TO_CART,
+//         product,
+//         quantity
+//     }
+// }
 var initialState = []
 const productPageReducer = (state=initialState, action) =>{
     if(action!==undefined){

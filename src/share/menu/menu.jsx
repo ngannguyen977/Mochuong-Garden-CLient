@@ -59,7 +59,7 @@ class Menu extends React.Component {
 				<ul>
 					<li><img className="img-responsive" src={fb} alt="" /><span>Fanpage</span></li>
 					<li><img className="img-responsive" src={ship} alt="" /><span>Vận chuyển</span></li>
-					<li><img className="img-responsive" src={cart} alt="" /><span>Giỏ hàng</span></li>
+					<Link to={'/cart'}><img className="img-responsive" src={cart} alt="" /><span>Giỏ hàng</span></Link>
 				</ul>
 		  </div>
 		</div>

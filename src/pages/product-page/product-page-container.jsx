@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import ProductsListPage from './product-page-list';
 import "./product-page.css";
 import { actGetProductPageListRequest } from '../product-page-reducer';
+// import { actAddToCart } from '../shopping-cart/shopping-cart-reducer';
 
 const mapStateToProps = state =>{
     return {
@@ -10,8 +11,9 @@ const mapStateToProps = state =>{
         
     }
 }
-const mapDispatchToProps = dispatch =>{
+const mapDispatchToProps = (dispatch, props) =>{
     return {
+       
         getProductPageListFromStore:(pageIndex, pageSize)=> dispatch(actGetProductPageListRequest(pageIndex, pageSize))
     }
 }

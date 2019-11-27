@@ -4,8 +4,8 @@ import NotFound from './pages/notfound/notfound';
 import Products from './pages/products/products';
 import ProductsContainer from './pages/products/products-container';
 import ProductActions from './pages/product-actions/productAddPage';
-// import ProductDetail from './pages/product-detail/product-detail'
-import ProductDetailContainer from './pages/product-detail/product-detail-container'
+import ProductCartContainer from './pages/shopping-cart/shopping-cart-container';
+import ProductDetailContainer from './pages/product-detail/product-detail-container';
 
 const routes = [
     {
@@ -17,6 +17,11 @@ const routes = [
         path: '/products',
         exact: false,
         main:({match}) =><ProductsContainer match={match}/>
+    },
+    {
+        path: '/cart',
+        exact: false,
+        main:() =><ProductCartContainer/>
     },
     {
         path: '/products/:id/edit',

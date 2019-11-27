@@ -1,6 +1,8 @@
 import {connect} from 'react-redux';
 import ProductDetail from './product-detail';
 import { actGetProductByIdRequest } from '../product-page-reducer';
+import {actAddToCart} from '../shopping-cart/shopping-cart-reducer';
+import {actAddMessage} from '../../share/messages/message-reducer';
 import "./product-detail.css";
 
 const mapStateToProps =(state)=>{
@@ -12,9 +14,17 @@ const mapStateToProps =(state)=>{
     }
 }
 //chuyen ham thanh props de thuc thi action
-const mapDispatchToProps = dispatch =>{
+const mapDispatchToProps = (dispatch, props) =>{
     return {
-        getProductDetailFromStore:(id)=>dispatch(actGetProductByIdRequest(id))
+        onAddToCart:(product)=>{
+            dispatch(actAddToCart(product,1))
+        },
+        getProductDetailFromStore:(id)=>{
+            dispatch(actGetProductByIdRequest(id)
+        )},
+        onAddMessage:(message)=>{
+            dispatch(actAddMessage(message)
+        )}
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail)
