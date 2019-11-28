@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Menu from './share/menu/menu';
+import Container from './pages/shopping-cart/shopping-cart-container';
 import routes from './routes';
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
         // error <Route> và <Route>
       <Router>
         <div className="App">
-          <Menu />
+          <Container.MenuContainer />
             <Switch>
                 {this.showContentMenus(routes)}
             </Switch>
@@ -23,7 +23,7 @@ class App extends React.Component {
         if(routes.length>0){
             result = routes.map((route, index)=>{
                 return (
-                    <Route 
+                    <Route
                         key ={index}
                         path={route.path}
                         exact={route.exact}

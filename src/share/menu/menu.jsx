@@ -19,7 +19,7 @@ const menus = [
 ]
 const MenuLink = ({label,to, acticOnlyWhenExact})=>{
   return (
-		<Route 
+		<Route
 		path ={to}
 		exact={acticOnlyWhenExact}
 		children={({match})=>{
@@ -36,7 +36,7 @@ const MenuLink = ({label,to, acticOnlyWhenExact})=>{
   )
 }
 class Menu extends React.Component {
-	
+
   render(){
 	var {onUpdateQuantityOnMenu} = this.props;
 	console.log("cart in menu", this.props)
@@ -63,7 +63,7 @@ class Menu extends React.Component {
 					<li><img className="img-responsive" src={fb} alt="" /><span>Fanpage</span></li>
 					<li><img className="img-responsive" src={ship} alt="" /><span>Vận chuyển</span></li>
 					<Link to={'/cart'}><img className="img-responsive" src={cart} alt="" />
-						<span>Giỏ hàng</span><span className="account-cart">5</span>
+						<span>Giỏ hàng</span><span className="account-cart">{this.props.allQuantity}</span>
 					</Link>
 				</ul>
 		  </div>
@@ -75,7 +75,7 @@ class Menu extends React.Component {
 		if(menus.length>0){
 			result = menus.map((menu,index)=>{
 				return (
-					<MenuLink 
+					<MenuLink
 						key={index}
 						label={menu.name}
 						to={menu.to}

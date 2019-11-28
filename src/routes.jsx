@@ -4,7 +4,7 @@ import NotFound from './pages/notfound/notfound';
 import Products from './pages/products/products';
 import ProductsContainer from './pages/products/products-container';
 import ProductActions from './pages/product-actions/productAddPage';
-import ProductCartContainer from './pages/shopping-cart/shopping-cart-container';
+import ShoppingCartRoute from './pages/shopping-cart/shopping-cart-container';
 import ProductDetailContainer from './pages/product-detail/product-detail-container';
 
 const routes = [
@@ -21,7 +21,7 @@ const routes = [
     {
         path: '/cart',
         exact: false,
-        main:() =><ProductCartContainer/>
+        main:() =><ShoppingCartRoute.ShoppingCartContainer/>
     },
     {
         path: '/products/:id/edit',
@@ -43,7 +43,7 @@ const routes = [
         exact: false,
         main:() =><NotFound />
     },
-    
+
 ]
 export default routes;
 // match khi có id trên URL

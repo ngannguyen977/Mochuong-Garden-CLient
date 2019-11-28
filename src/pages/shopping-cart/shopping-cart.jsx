@@ -27,8 +27,8 @@ class ShoppingCart extends React.Component {
 					<tbody>
 						{this.showCartItem(cart)}
 					</tbody>
-				</table>		
-				
+				</table>
+
 				<table className="table tbl-result">
 					<tbody className="pull-right">
 						<tr>
@@ -36,7 +36,7 @@ class ShoppingCart extends React.Component {
 							<td>
 								<h4>
 									<strong>Tổng Tiền</strong>
-									<span>({this.showAllQuantity(cart)} sản phẩm)</span>
+									<span>({this.props.showAllQuantity(cart)} sản phẩm)</span>
 								</h4>
 							</td>
 							<td>
@@ -60,27 +60,27 @@ class ShoppingCart extends React.Component {
 		for(var i=0; i< cart.length; i++){
 			//lấy giá từng phần tử * số lượng và cộng dồn lại
 			total +=cart[i].product.price*cart[i].quantity
-		} 
+		}
 	}
 	return total;
   }
-  showAllQuantity=(cart)=>{
-	var allQuantity = 0;
-	if(cart.length>0){
-		for(var i=0; i< cart.length; i++){
-			//lấy số lượng từng phần tử cộng dồn lại
-			allQuantity +=cart[i].quantity
-		} 
-	}
-	return allQuantity
-  }
+//   showAllQuantity=(cart)=>{
+// 	var allQuantity = 0;
+// 	if(cart.length>0){
+// 		for(var i=0; i< cart.length; i++){
+// 			//lấy số lượng từng phần tử cộng dồn lại
+// 			allQuantity +=cart[i].quantity
+// 		}
+// 	}
+// 	return allQuantity
+//   }
   showCartItem =(cart) => {
 	var result = MSG.MSG_CART_EMPTY;
 	var {onDeleteProductInCart, onUpdateProductQuantity} = this.props
 	if(cart.length>0){
 		result = cart.map((item, index)=>{
 			return (
-				
+
 				<CartItem
 					key={index}
 					index={index}
@@ -89,7 +89,7 @@ class ShoppingCart extends React.Component {
 					onUpdateProductQuantity={onUpdateProductQuantity}
 					>
 				</CartItem>
-			
+
 			)
 		})
 	}
