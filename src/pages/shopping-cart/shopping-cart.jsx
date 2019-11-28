@@ -8,6 +8,7 @@ class ShoppingCart extends React.Component {
   render(){
 	  //cart lấy trên store
 	var { cart } = this.props;
+	console.log("cart", cart)
     return (
         <div className="cart-page">
 			<div className="container">
@@ -75,6 +76,7 @@ class ShoppingCart extends React.Component {
   }
   showCartItem =(cart) => {
 	var result = MSG.MSG_CART_EMPTY;
+	var {onDeleteProductInCart, onUpdateProductQuantity} = this.props
 	if(cart.length>0){
 		result = cart.map((item, index)=>{
 			return (
@@ -83,6 +85,8 @@ class ShoppingCart extends React.Component {
 					key={index}
 					index={index}
 					product={item}
+					onDeleteProductInCart={onDeleteProductInCart}
+					onUpdateProductQuantity={onUpdateProductQuantity}
 					>
 				</CartItem>
 			

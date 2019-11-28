@@ -7,10 +7,11 @@ class ProductDetail extends React.Component {
         // lấy id trên URL để show detail của id đó
         let id = this.props.match.params.id
         this.props.getProductDetailFromStore(id)
-        // console.log("lấy param id", this.props)
+        
     }
     render() {
-        let {itemDetail} = this.props
+        let {itemDetail} = this.props;
+        // console.log("lấy props", onAddMessage)
         return (
             <div className="product-item-detail">
                 <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
@@ -56,6 +57,9 @@ class ProductDetail extends React.Component {
             </div>
         );
     }
+    // bấm váo button sẽ gọi tới props
+    // props này có nhiệm vụ là kết nối lên store
+    // ->dispatch cái action thay đồi message
     onAddToCart =(product)=>{
         this.props.onAddToCart(product)
         this.props.onAddMessage(Message.MSG_ADD_SUCCESS)

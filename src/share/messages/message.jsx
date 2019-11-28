@@ -3,7 +3,7 @@ class MessageComponent extends Component {
    
     render(){
         var {message} = this.props
-        console.log("da nhan duoc massage chua", this.props)
+        console.log("da nhan duoc message chua", this.props)
         return (
             <div className="message-wrapper">
                 <i className="fas fa-check"></i>

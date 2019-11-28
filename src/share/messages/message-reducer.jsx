@@ -3,17 +3,18 @@ import * as Message from '../../constants/message';
 
 export const actAddMessage =(message)=>{
     return {
-        type: Message.MSG_ADD_SUCCESS,
-        message: message
+        type: Types.CHANGE_MESSAGE,
+        message
     }
 } 
 
 var initialState = "";
 const MessageReducer = (state=initialState, action)=> {
  switch(action.type){
-    case Message.MSG_ADD_SUCCESS:
-        console.log("message from store", state)
-        return {...state, messageFromStore: action.message}
+    case Types.CHANGE_MESSAGE:
+        console.log("meassage", action)
+        //trong action có
+        return  action.message
     default: return state;
  }
 

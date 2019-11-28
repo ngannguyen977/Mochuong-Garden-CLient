@@ -1,12 +1,11 @@
 import {connect} from 'react-redux';
-import Message from './message';
+import MessageComponent from './message';
 import "./message.css";
 
 const mapStateToProps = state =>{
-    console.log("message from store", massage)
+    console.log("state conteiner", state)
     return {
-        message: state.MessageReducer.messageFromStore
+        message: state.message
     }
 }
-
-export default connect(mapStateToProps, null)(Message);
+export default connect(mapStateToProps, null)(MessageComponent);
