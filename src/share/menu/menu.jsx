@@ -38,8 +38,7 @@ const MenuLink = ({label,to, acticOnlyWhenExact})=>{
 class Menu extends React.Component {
 
   render(){
-	var {onUpdateQuantityOnMenu} = this.props;
-	console.log("cart in menu", this.props)
+	
     return (
         <div className="menu">
             <div className="navbar">
@@ -62,9 +61,11 @@ class Menu extends React.Component {
 				<ul>
 					<li><img className="img-responsive" src={fb} alt="" /><span>Fanpage</span></li>
 					<li><img className="img-responsive" src={ship} alt="" /><span>Vận chuyển</span></li>
-					<Link to={'/cart'}><img className="img-responsive" src={cart} alt="" />
-						<span>Giỏ hàng</span><span className="account-cart">{this.props.allQuantity}</span>
-					</Link>
+					<li className="cart-top">
+						<Link to={'/cart'}><img className="img-responsive" src={cart} alt="" />
+							<span>Giỏ hàng</span><span className="account-cart">{this.props.allQuantity}</span>
+						</Link>
+					</li>
 				</ul>
 		  </div>
 		</div>

@@ -51,9 +51,7 @@ class CartItem extends Component {
     onDeleteCart = (product)=>{
         console.log("click xóa", product)
         var {onDeleteProductInCart} = this.props;
-        if(product>0){
-            onDeleteProductInCart(product)
-        }
+        onDeleteProductInCart(product)
     }
     onUpdateQuantity=(product, quantity)=>{
         var {onUpdateProductQuantity} = this.props

@@ -1,10 +1,12 @@
 import * as Types from '../../constants/actionTypes';
+// import {message} from 'antd';
 
 var data = JSON.parse(localStorage.getItem('CART'));
 //lấy data nếu data tồn tại, ngược lại là rỗng
 var initialState = data ? data : [];
 ///ADD
 export const actAddToCart =(product, quantity)=>{
+    // message.success('This is a success message');
     return {
         type: Types.ADD_TO_CART,
         product,
@@ -13,7 +15,6 @@ export const actAddToCart =(product, quantity)=>{
 }
 ///DELETE
 export const actDeleteInCart = (product) =>{
-    
    return{
     type: Types.DELETE_PRODUCT_CART,
     product
@@ -56,11 +57,11 @@ const CartReducer = (state=initialState, action) =>{
 
         case Types.DELETE_PRODUCT_CART:
             index = findProductInCart(state, product);
-            if(index !==-1){
-                state.splice(index, 1)
-            }
-            localStorage.setItem('CART', JSON.stringify(state))
-        return [...state]
+                if(index !==-1){
+                    state.splice(index, 1)
+                }
+                localStorage.setItem('CART', JSON.stringify(state))
+            return [...state]
         case Types.UPDATE_PRODUCT_QUANTITY:
             index= findProductInCart(state, product);
             if(index !==-1){

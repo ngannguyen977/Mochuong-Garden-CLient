@@ -6,7 +6,6 @@ import {actAddMessage} from '../../share/messages/message-reducer';
 import "./product-detail.css";
 
 const mapStateToProps =(state)=>{
-    console.log("state from store", state)
 
     return {
         //itemDetail này sẽ được gọi ở detail conponent
@@ -23,8 +22,12 @@ const mapDispatchToProps = (dispatch, props) =>{
             dispatch(actGetProductByIdRequest(id)
         )},
         onAddMessage:(message)=>{
-            dispatch(actAddMessage(message)
-        )}
+            dispatch(actAddMessage(message),
+            setTimeout(() => {
+                dispatch(actAddMessage(""))
+            },5000)// run this func after 2 seconds
+        )},
+        
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail)

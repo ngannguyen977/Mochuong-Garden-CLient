@@ -8,7 +8,6 @@ class ShoppingCart extends React.Component {
   render(){
 	  //cart lấy trên store
 	var { cart } = this.props;
-	console.log("cart", cart)
     return (
         <div className="cart-page">
 			<div className="container">
@@ -64,16 +63,7 @@ class ShoppingCart extends React.Component {
 	}
 	return total;
   }
-//   showAllQuantity=(cart)=>{
-// 	var allQuantity = 0;
-// 	if(cart.length>0){
-// 		for(var i=0; i< cart.length; i++){
-// 			//lấy số lượng từng phần tử cộng dồn lại
-// 			allQuantity +=cart[i].quantity
-// 		}
-// 	}
-// 	return allQuantity
-//   }
+
   showCartItem =(cart) => {
 	var result = MSG.MSG_CART_EMPTY;
 	var {onDeleteProductInCart, onUpdateProductQuantity} = this.props

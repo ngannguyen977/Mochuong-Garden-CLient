@@ -2,6 +2,7 @@ import * as Types from '../../constants/actionTypes';
 import * as Message from '../../constants/message';
 
 export const actAddMessage =(message)=>{
+    // this.Message.MSG_ADD_SUCCESS)
     return {
         type: Types.CHANGE_MESSAGE,
         message

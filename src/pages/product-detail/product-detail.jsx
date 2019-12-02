@@ -1,17 +1,25 @@
 import React from 'react';
 import * as Message from '../../constants/message';
-import MessageComponent from '../../share/messages/message'
+import MessageContainer from '../../share/messages/message-container'
 
 class ProductDetail extends React.Component {
+
+  
+    onShowMessage=(message)=>{
+        this.props.onAddMessage(message);
+       
+    }
+    
     componentDidMount(){
         // lấy id trên URL để show detail của id đó
         let id = this.props.match.params.id
         this.props.getProductDetailFromStore(id)
         
     }
+    
     render() {
         let {itemDetail} = this.props;
-        // console.log("lấy props", onAddMessage)
+        console.log("lấy props", this.props)
         return (
             <div className="product-item-detail">
                 <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
@@ -53,7 +61,7 @@ class ProductDetail extends React.Component {
                     </div>
                 </div>
                 <div className="clearfix"></div>
-                <MessageComponent />
+                <MessageContainer />
             </div>
         );
     }
@@ -62,7 +70,7 @@ class ProductDetail extends React.Component {
     // ->dispatch cái action thay đồi message
     onAddToCart =(product)=>{
         this.props.onAddToCart(product)
-        this.props.onAddMessage(Message.MSG_ADD_SUCCESS)
+        this.onShowMessage(Message.MSG_ADD_SUCCESS)
     }
 
 }

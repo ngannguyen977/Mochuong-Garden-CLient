@@ -3,7 +3,28 @@
     margin-top: 20px;
 }
 
-.menu .nav li a {
+.cart-top {
+    position: relative;
+}
+
+.account-cart {
+    position: absolute;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    bottom: 0;
+    color: #fff !important;
+    background: #f95c08;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.account-cart .menu .nav li a {
     color: #856845;
     font-size: 20px;
     font-weight: bold;
