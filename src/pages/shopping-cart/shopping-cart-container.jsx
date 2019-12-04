@@ -16,12 +16,17 @@ const showAllQuantity = (cart=[]) => {
   return allQuantity
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
+  // tham số state này nằm trong store
   //map với cart trong reducers/index
   // props cart này có ds các san pham trong gio hang
   let cart = state.CartReducer
   return {
+    // key(props để sd): cart trái
+    // value: cart phải
+    // ở đâu ta có cart là 1 props lên store lấy ds các cart về
     cart: cart,
+    // cart: state.CartReducer
     allQuantity: showAllQuantity(cart)
   }
 

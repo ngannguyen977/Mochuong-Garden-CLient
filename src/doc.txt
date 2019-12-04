@@ -1,3 +1,6 @@
+- Redux hỗ trợ chuyển các state của store thành các props
+ của component
+
 pages:
     home
     products
@@ -18,7 +21,6 @@ Giả lập API:
  - json server (offline)
  - hoac mock API (online)
 và test trên postman
-
 ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ
 Render giao dien chỉ mất 1s trong khi
 gọi lên server lấy data mất 5s
@@ -31,3 +33,15 @@ note: componentdidmount : lần đầu tiên render products sẽ rỗng
 
 // chạy render đầu tiên ko có du lieu -> chạy vào didmount (gọi hàm getProductPageListFromStore) 
 //->call Api trong product-page-reducer -> render lại
+
+NOTE: 
+** trong phạm vi class mới dùng từ khóa " this"
+- this.state
+- this.props
+- tại action mình đã có key và value
+** [...state] copy ra state mới để trả về
+*** localStorgare phải lưu dạng "string"
+
+ex: this.props.onAddTask(this.state)
+// this.state là do tại component 
+mình có khởi tạo state trong constructor hoặc setState trong hàm componentWillMout
