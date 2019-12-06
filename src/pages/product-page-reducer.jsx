@@ -35,13 +35,13 @@ export const actGetProductById = (data) => {
         dataOfProductDetail: data
     }
 }
-export const actChangeLabel=(product, quantity)=>{
-    return{
-        type: Types.CHANGE_LABEL,
-        product,
-        quantity
-    }
-}
+// export const actChangeLabel=(product, quantity)=>{
+//     return{
+//         type: Types.CHANGE_LABEL,
+//         product,
+//         quantity
+//     }
+// }
 var initialState = []
 const productPageReducer = (state=initialState, action) =>{
     if(action!==undefined){
@@ -50,8 +50,8 @@ const productPageReducer = (state=initialState, action) =>{
                 return {...state, dataproducts: action.dataOfProductPageList, totalPage: action.totalPage}
             case Types.GET_PRODUCT_DETAIL:
                 return {...state, dataDetail: action.dataOfProductDetail}
-            case Types.CHANGE_LABEL:
-                //return {...state, state, dataDetail}
+            // case Types.CHANGE_LABEL:
+            // return {...state, productInStore: action.product}
             default: 
                 return state
         }

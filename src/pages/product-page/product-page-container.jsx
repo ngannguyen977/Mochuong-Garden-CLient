@@ -13,7 +13,6 @@ const mapStateToProps = state =>{
 }
 const mapDispatchToProps = (dispatch, props) =>{
     return {
-       
         getProductPageListFromStore:(pageIndex, pageSize)=> dispatch(actGetProductPageListRequest(pageIndex, pageSize))
     }
 }

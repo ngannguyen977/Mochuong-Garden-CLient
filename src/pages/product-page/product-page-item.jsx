@@ -15,7 +15,8 @@ class ProductPageItem extends React.Component {
                     <p>{item.des}</p>
                     <div className="box-bottom">
                         <span className="price"><p>{item.price}</p></span>
-                        <span className="lbl-action"></span>
+                        <span className="lbl-action">HẾT HÀNG</span>
+                        <button className="btn">MUA HÀNG</button>
                     </div>
                </Link>
               
@@ -23,6 +24,7 @@ class ProductPageItem extends React.Component {
            
     );
   }
+  
 
 }
 

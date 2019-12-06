@@ -1,58 +1,69 @@
 {
-  "products": [
-    {
-      "id": 1,
-      "name": "cây hương thảo",
-      "image": "https://miro.medium.com/max/4096/1*JOFboJ84dGOxgkKWvmVGKg.jpeg",
-      "price": 500,
-      "status": true,
-      "feature": "ưa nắng",
-      "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
-    },
-    {
-      "id": 2,
-      "name": "cây hương nhu",
-      "image": "https://congdungcuacay.com/wp-content/uploads/2019/05/tinh-dau-huong-thao.jpg",
-      "price": 700,
-      "status": false,
-      "feature": "ưa nắng",
-      "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
-    },
-    {
-      "id": 3,
-      "name": "Bạc hà mint",
-      "image": "https://miro.medium.com/max/648/0*p9DL5gpH_TPAz_Gs.jpg",
-      "price": 2000,
-      "status": true,
-      "feature": "ưa nắng",
-      "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
-    },
-    {
-      "id": 4,
-      "name": "cây hương thảo",
-      "image": "https://miro.medium.com/max/4096/1*JOFboJ84dGOxgkKWvmVGKg.jpeg",
-      "price": 500,
-      "status": true,
-      "feature": "ưa nắng",
-      "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
-    },
-    {
-      "id": 5,
-      "name": "cây hương nhu",
-      "image": "https://congdungcuacay.com/wp-content/uploads/2019/05/tinh-dau-huong-thao.jpg",
-      "price": 700,
-      "status": false,
-      "feature": "ưa nắng",
-      "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
-    },
-    {
-      "id": 6,
-      "name": "Bạc hà mint",
-      "image": "https://miro.medium.com/max/648/0*p9DL5gpH_TPAz_Gs.jpg",
-      "price": 2000,
-      "status": true,
-      "feature": "ưa nắng",
-      "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
-    }
-  ]
+    "products": [{
+            "id": 1,
+            "name": "cây hương thảo",
+            "image": "https://miro.medium.com/max/4096/1*JOFboJ84dGOxgkKWvmVGKg.jpeg",
+            "quantity": 10,
+            "categoryId": "TD01",
+            "price": 500,
+            "status": true,
+            "feature": "ưa nắng",
+            "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
+        },
+        {
+            "id": 2,
+            "name": "cây sen đá",
+            "image": "https://cdn.vietnammoi.vn/stores/news_dataimages/linhnt/072018/06/09/3723_36701880_2017140148319292_2904331244323995648_n.jpg",
+            "quantity": 0,
+            "categoryId": "C01",
+            "price": 700,
+            "status": false,
+            "feature": "ưa nắng",
+            "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
+        },
+        {
+            "id": 3,
+            "name": "sâm lông",
+            "image": "https://www.hatgiongf1.com/Uploads/croped/hat-giong-suong-sam-long-109705-450x450.jpg",
+            "quantity": 12,
+            "categoryId": "RA01",
+            "price": 2000,
+            "status": true,
+            "feature": "ưa nắng",
+            "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
+        },
+        {
+            "id": 4,
+            "name": "cây hoa hồng",
+            "image": "https://w9c4z7k4.stackpathcdn.com/wp-content/uploads/2017/09/107.-Hoa-h%E1%BB%93ng-ngo%E1%BA%A1i-Rose-Pompadour.jpg",
+            "quantity": 3,
+            "categoryId": "H01",
+            "price": 500,
+            "status": true,
+            "feature": "ưa nắng",
+            "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
+        },
+        {
+            "id": 5,
+            "name": "cây rau cần lá xoăn",
+            "image": "http://giadinh.mediacdn.vn/thumb_w/600/2016/photo-32-1475220377481.jpg",
+            "quantity": 20,
+            "categoryId": "RA01",
+            "price": 700,
+            "status": false,
+            "feature": "ưa nắng",
+            "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
+        },
+        {
+            "id": 6,
+            "name": "Hoa hồng điều",
+            "image": "https://3.bp.blogspot.com/-IV_dhO9ObY4/XOIbsZqOc-I/AAAAAAAAJ8M/xZTTHG3Cez4yz2AlYaAht09RAX9Ya9l8gCEwYBhgL/s1600/mua-hong-dieu-co-2.jpg",
+            "quantity": 15,
+            "categoryId": "H01",
+            "price": 2000,
+            "status": true,
+            "feature": "ưa nắng",
+            "des": "Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh."
+        }
+    ]
 }
