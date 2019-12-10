@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Container from './pages/shopping-cart/shopping-cart-container';
 import routes from './routes';
+import Footer from './share/footer/footer'
 
 class App extends React.Component {
   render(){
@@ -11,11 +12,13 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Container.MenuContainer />
-            <Switch>
-                {this.showContentMenus(routes)}
-            </Switch>
-      </div>
+          <Switch>
+              {this.showContentMenus(routes)}
+          </Switch>
+          <Footer />
+        </div>
       </Router>
+     
     );
   }
     showContentMenus = (routes) =>{

@@ -1,0 +1,13 @@
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px dashed #ddd;
+}
+
+.footer .txt-sign {
+  color: #00634f;
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+}
+/*# sourceMappingURL=footer.css.map */

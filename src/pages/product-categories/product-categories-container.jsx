@@ -2,12 +2,16 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ProductCategories from './product-categories';
 import ProductCategoriesItem from './product-categories-item';
+import {actGetProductCategoriesRequest} from './reducer'
 
 class ProductCategoriesContainer extends React.Component {
+    componentDidMount(){
+        console.log('test',this.props)
+        this.props.getProductCategoriesFromStore()
+    }
   render(){
     //   console.log('product', products)
     var {productCategories} = this.props;
-    // console.log("co san pham chua",this.props)
     return (
         <div>
             <ProductCategories>
@@ -20,10 +24,10 @@ class ProductCategoriesContainer extends React.Component {
   showProductCategories(productCategories){
     var result = null;
     if(productCategories.length>0){
-        result = productCategories.map((product,index)=>{
+        result = productCategories.map((category,index)=>{
             return <ProductCategoriesItem 
                 key={index}
-                product = {product}
+                category = {category}
             />
         })
     }
@@ -36,4 +40,11 @@ const mapStateToProps = state =>{
         productCategories : state.productCategoriesReducer
     }
 }
-export default connect(mapStateToProps, null)(ProductCategoriesContainer);
+const mapDispatchToProps = (dispatch, props) =>{
+    return {
+        getProductCategoriesFromStore:()=>{
+            dispatch(actGetProductCategoriesRequest()
+        )},
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ProductCategoriesContainer);

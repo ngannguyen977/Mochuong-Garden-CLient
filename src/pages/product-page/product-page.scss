@@ -2,6 +2,7 @@
     margin-top: 20px;
 }
 
+//COMMON CSS
 a,
 a:hover {
     color: #333;
@@ -12,8 +13,29 @@ a:hover {
     color: #00634f;
 }
 
+.btn-green {
+    background: #00634f;
+    color: #fff;
+    &:hover {
+        color: yellowgreen;
+    }
+}
+
+.lbl-action {
+    color: red;
+}
+
+//PRODUCT ITEM PAGE
 .product-page-item {
     min-height: 400px;
+    margin-bottom: 30px;
+    .fl-right {
+        float: right;
+    }
+    .product-img {
+        height: 200px;
+        object-fit: cover;
+    }
 }
 
 //PAGITON

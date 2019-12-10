@@ -12,8 +12,32 @@ a:hover {
   color: #00634f;
 }
 
+.btn-green {
+  background: #00634f;
+  color: #fff;
+}
+
+.btn-green:hover {
+  color: yellowgreen;
+}
+
+.lbl-action {
+  color: red;
+}
+
 .product-page-item {
   min-height: 400px;
+  margin-bottom: 30px;
+}
+
+.product-page-item .fl-right {
+  float: right;
+}
+
+.product-page-item .product-img {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .navigation {

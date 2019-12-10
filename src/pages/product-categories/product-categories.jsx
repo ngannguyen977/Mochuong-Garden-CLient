@@ -6,7 +6,7 @@ class ProductCategories extends React.Component {
         <div className="product-categories">
             <div className= "container">
               <div className="flex-content">
-              {this.props.children}
+                {this.props.children}
               </div>
             </div>
         </div>

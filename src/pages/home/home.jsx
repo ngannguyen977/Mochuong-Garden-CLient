@@ -11,7 +11,7 @@ class Home extends React.Component {
             <div className= "container">
 				<img className="img-responsive" src={banner} alt="" />
 				<div className ="product-categories">
-          			<ProductCategoriesContainer />
+						<ProductCategoriesContainer />
 				</div>
 				<div>
 					<ProductsPageContainer />
@@ -20,6 +20,7 @@ class Home extends React.Component {
         </div>
     );
   }
+  
 
 }
 

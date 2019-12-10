@@ -3,7 +3,7 @@ import * as config from './../constants/config.jsx';
 
 // chuyền vào 3 ts:
 // endpoint, method, data (body)
- export default function callApi(endpoint, method="GET", body){
+export default function callApi(endpoint, method="GET", body){
      return  axios({
         //method,url,body ben phai la tham so chuyền vào
         method: method,
@@ -14,4 +14,5 @@ import * as config from './../constants/config.jsx';
         console.log(err);
     })
  }
+ 
  // -> su dung caLLApi() tại product-page-reducer

@@ -1,13 +1,16 @@
 import React from 'react';
 import * as Message from '../../constants/message';
-import MessageContainer from '../../share/messages/message-container'
+import {Link } from 'react-router-dom';
+import MessageContainer from '../../share/messages/message-container';
+import "../product-page/product-page.css";
+import "./product-detail.css";
+
 
 class ProductDetail extends React.Component {
 
   
     onShowMessage=(message)=>{
         this.props.onAddMessage(message);
-       
     }
     
     componentDidMount(){
@@ -19,17 +22,20 @@ class ProductDetail extends React.Component {
     
     render() {
         let {itemDetail} = this.props;
+        let canBuy = itemDetail.quantity > 0;
         console.log("lấy props", this.props)
         return (
-            <div className="product-item-detail">
+           <div className="container">
+                <div className="product-item-detail">
                 <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <Link to={'/'} classname="back-to-home">Về trang chủ</Link>
                     <img className="img-responsive" src={itemDetail.image}/>
                     <h3>{itemDetail.name}</h3>
                     <p>{itemDetail.des}</p>
                 </div>
                 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <div className="card-right">
-                        <table className="table">
+                        <table className="table tbl-product-detail">
                             
                             <thead>THÔNG TIN SẢN PHẨM</thead>
                             <tbody>
@@ -55,14 +61,16 @@ class ProductDetail extends React.Component {
                                 </tr>
                             </tbody>
                         </table>
-                        <a className="btn"
+                        { canBuy ? <a className="btn btn-green"
                         onClick={()=>this.onAddToCart(itemDetail)}
-                        >Mua Hàng</a>
+                        >Mua Hàng</a> : <span className="lbl-action">SẢN PHẨM HẾT HÀNG</span>}
+                        
                     </div>
                 </div>
                 <div className="clearfix"></div>
                 <MessageContainer />
             </div>
+           </div>
         );
     }
     // bấm váo button sẽ gọi tới props
