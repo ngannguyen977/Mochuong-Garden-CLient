@@ -10,8 +10,9 @@ class ProductCategoriesContainer extends React.Component {
         this.props.getProductCategoriesFromStore()
     }
   render(){
-    //   console.log('product', products)
+   
     var {productCategories} = this.props;
+    console.log('product category', productCategories)
     return (
         <div>
             <ProductCategories>
