@@ -3,7 +3,7 @@ import './categories.css';
 class ProductCategoriesItem extends React.Component {
   render(){
     var {category} = this.props;
-    // console.log("item", product)
+    console.log("product category item", category)
     
     return (
       
