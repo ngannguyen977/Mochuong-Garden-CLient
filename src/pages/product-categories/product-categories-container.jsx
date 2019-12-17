@@ -2,17 +2,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ProductCategories from './product-categories';
 import ProductCategoriesItem from './product-categories-item';
-import {actGetProductCategoriesRequest} from './reducer'
+import {actGetProductCategoriesRequest, actGetProductCategoriesByid} from './reducer'
 
 class ProductCategoriesContainer extends React.Component {
+ 
     componentDidMount(){
-        console.log('test',this.props)
         this.props.getProductCategoriesFromStore()
-    }
+        setTimeout(() => {
+        //console.log('get category gium TO voi',this.props)
+        }, 1000);
+      }
   render(){
-   
     var {productCategories} = this.props;
-    console.log('product category', productCategories)
+    console.log('product category container', this.props)
     return (
         <div>
             <ProductCategories>
@@ -22,14 +24,18 @@ class ProductCategoriesContainer extends React.Component {
     );
   }
 
-  showProductCategories(productCategories){
+  showProductCategories(productCategories=[]){
     var result = null;
+    var {onShowCategoryById} = this.props
     if(productCategories.length>0){
         result = productCategories.map((category,index)=>{
-            return <ProductCategoriesItem 
-                key={index}
-                category = {category}
-            />
+            return (
+                <ProductCategoriesItem 
+                    key={index}
+                    category = {category}
+                    onShowCategoryById = {onShowCategoryById}
+                />
+            )
         })
     }
     return result;
@@ -38,7 +44,7 @@ class ProductCategoriesContainer extends React.Component {
 
 const mapStateToProps = state =>{
     return {
-        productCategories : state.productCategoriesReducer
+        productCategories : state.productCategoriesReducer.dataCategories
     }
 }
 const mapDispatchToProps = (dispatch, props) =>{
@@ -46,6 +52,12 @@ const mapDispatchToProps = (dispatch, props) =>{
         getProductCategoriesFromStore:()=>{
             dispatch(actGetProductCategoriesRequest()
         )},
+        //tham so dua vào act trong reducer
+        //chuyền prop này lên trên và vào ProductCategoriesItem nhận lại 
+        // tại phương thức onSelectedCategoryId ()
+        onShowCategoryById : (dataOfFilterCategories)=>{
+            dispatch(actGetProductCategoriesByid(dataOfFilterCategories))
+        }
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProductCategoriesContainer);

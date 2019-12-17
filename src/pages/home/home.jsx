@@ -4,7 +4,9 @@ import ProductCategoriesContainer from '../product-categories/product-categories
 import ProductsPageContainer from '../product-page/product-page-container';
 
 class Home extends React.Component {
+  
   render(){
+   
     return (
         <div className="home-page">
             <div className="banner"></div>

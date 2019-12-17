@@ -7,7 +7,6 @@ export const actGetProductPageListRequest =(pageIndex=0, pageSize=3)=>{
     return (dispatch) => {
         callApi(`${API_URL_PRODUCT_LIST}?pageIndex=${pageIndex}&pageSize=${pageSize}`,'GET', null).then(res => {
             dispatch(actGetProductPageList(res.data, res.total))
-            console.log("totalPage", res.total)
         })
     }
 }

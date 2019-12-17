@@ -45,3 +45,10 @@ NOTE:
 ex: this.props.onAddTask(this.state)
 // this.state là do tại component 
 mình có khởi tạo state trong constructor hoặc setState trong hàm componentWillMout
+
+
+///////////////////////////////////////////////
+thì khi mình click vào 1 cate
+mình sẽ lấy được id của cate đang click đó
+dựa vào id của cate đó,
+mình lọc ra những product nào có categoryID = cái id mình đang click được
