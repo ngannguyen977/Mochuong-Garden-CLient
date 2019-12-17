@@ -13,7 +13,8 @@ const mapStateToProps = state =>{
 }
 const mapDispatchToProps = (dispatch, props) =>{
     return {
-        getProductPageListFromStore:(pageIndex, pageSize)=> dispatch(actGetProductPageListRequest(pageIndex, pageSize))
+        // su dung ham
+        getProductPageListFromStore:(pageIndex, pageSize, categoryId)=> dispatch(actGetProductPageListRequest(pageIndex, pageSize,categoryId))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsListPage);

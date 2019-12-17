@@ -3,9 +3,17 @@ import * as Types from '../constants/actionTypes';
 import {API_URL_PRODUCT_LIST} from '../constants/config';
 
 // PRODUCT LIST 
-export const actGetProductPageListRequest =(pageIndex=0, pageSize=3)=>{
+///tao ham get data theo dieu kien
+export const actGetProductPageListRequest =(categoryId)=>{
     return (dispatch) => {
-        callApi(`${API_URL_PRODUCT_LIST}?pageIndex=${pageIndex}&pageSize=${pageSize}`,'GET', null).then(res => {
+        // TODO: get du lieu theo categoryID
+        let url = `${API_URL_PRODUCT_LIST}`
+        if(categoryId){
+            url = url+`?categoryId=${categoryId}`
+            console.log("url to", url)
+        }
+        callApi(url,'GET', null).then(res => {
+            // get nhu
             dispatch(actGetProductPageList(res.data, res.total))
         })
     }

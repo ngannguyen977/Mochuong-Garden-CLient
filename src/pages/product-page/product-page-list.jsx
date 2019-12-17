@@ -14,7 +14,6 @@ class ProductsListPage extends React.Component {
 
  componentDidMount(){
      //goi len server trong lifecircle hook
-   
     this.props.getProductPageListFromStore();
   }
   showProductPage =(products=[])=>{
@@ -38,7 +37,7 @@ class ProductsListPage extends React.Component {
         let pagination =[]
         for(let i = 0; i < totalPage/pageSize; i++){
             pagination.push(<li key={i} classname={pageIndex===i? "active": "inactive"}>
-                <a onClick={()=>this.props.getProductPageListFromStore(i, pageSize)}>{i+1}</a>
+                <a href="#" onClick={()=>this.props.getProductPageListFromStore(i, pageSize)}>{i+1}</a>
             </li>)
         }
         return (
