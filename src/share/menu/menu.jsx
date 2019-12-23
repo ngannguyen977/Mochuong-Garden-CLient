@@ -16,6 +16,11 @@ const menus = [
     to:'/products',
     exact: false
   },
+  {
+    name : 'Liên hệ',
+    to:'/contact',
+    exact: true
+  }
 ]
 const MenuLink = ({label,to, acticOnlyWhenExact})=>{
   return (

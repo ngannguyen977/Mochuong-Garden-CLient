@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ProductCategories from './product-categories';
 import ProductCategoriesItem from './product-categories-item';
-import {actGetProductCategoriesRequest, actGetProductCategoriesByid} from './reducer'
+import {actGetProductCategoriesRequest} from './reducer';
+import {actGetProductPageListRequest} from '../product-page-reducer';
 
 class ProductCategoriesContainer extends React.Component {
  
@@ -12,7 +13,7 @@ class ProductCategoriesContainer extends React.Component {
         //console.log('get category gium TO voi',this.props)
         }, 1000);
       }
-  render(){
+    render(){
     var {productCategories} = this.props;
     console.log('product category container', this.props)
     return (
@@ -26,14 +27,14 @@ class ProductCategoriesContainer extends React.Component {
 
   showProductCategories(productCategories=[]){
     var result = null;
-    var {onShowCategoryById} = this.props
+    var {getProductPageListFromStore} = this.props
     if(productCategories.length>0){
         result = productCategories.map((category,index)=>{
             return (
                 <ProductCategoriesItem 
                     key={index}
                     category = {category}
-                    onShowCategoryById = {onShowCategoryById}
+                    getProductPageListFromStore = {getProductPageListFromStore}
                 />
             )
         })
@@ -52,11 +53,8 @@ const mapDispatchToProps = (dispatch, props) =>{
         getProductCategoriesFromStore:()=>{
             dispatch(actGetProductCategoriesRequest()
         )},
-        //tham so dua vào act trong reducer
-        //chuyền prop này lên trên và vào ProductCategoriesItem nhận lại 
-        // tại phương thức onSelectedCategoryId ()
-        onShowCategoryById : (dataOfFilterCategories)=>{
-            dispatch(actGetProductCategoriesByid(dataOfFilterCategories))
+        getProductPageListFromStore:(categoryId)=> {
+            dispatch(actGetProductPageListRequest(categoryId))
         }
     }
 }

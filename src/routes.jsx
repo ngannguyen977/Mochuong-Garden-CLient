@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './pages/home/home';
+import Contact from './pages/contact/contact';
 import NotFound from './pages/notfound/notfound';
 import Products from './pages/products/products';
 import ProductsContainer from './pages/products/products-container';
@@ -37,6 +38,11 @@ const routes = [
         path: '/product/add',
         exact: false,
         main:() =><ProductActions />
+    },
+    {
+        path: '/contact',
+        exact: false,
+        main:() =><Contact />
     },
     {
         path: '',
