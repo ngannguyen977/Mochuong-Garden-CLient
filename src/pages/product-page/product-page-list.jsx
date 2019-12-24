@@ -14,11 +14,9 @@ class ProductsListPage extends React.Component {
 //->call Api trong product-page-reducer -> render lại
 
  componentDidMount(){
-    this.props.getProductPageListFromStore();
-    
+    this.props.getProductPageListFromStore(undefined,0);
   }
   showProductPage =(products=[])=>{
-
         var result = null;
         if(products.length>0){
             result = products.map((item,index)=>{
@@ -38,7 +36,7 @@ class ProductsListPage extends React.Component {
         const {products, pageIndex, totalPage} = this.props;
         console.log("render page ",this.props)
         let pagination =[]
-        for(let i=0; i < totalPage/pageSize; i++){
+        for(let i=0; i < totalPage; i++){
             pagination.push(<li key={i} className={pageIndex === i? "active" : "inactive"}>
                 <a onClick={()=>this.props.getProductPageListFromStore(i,pageSize)}>{i+1}</a>
             </li>)

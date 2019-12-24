@@ -4,26 +4,30 @@ import {API_URL_PRODUCT_LIST} from '../constants/config';
 
 // PRODUCT LIST 
 //tao hàm
-export const actGetProductPageListRequest =(categoryId, pageIndex=0,pageSize=3)=>{
+export const actGetProductPageListRequest =(categoryId, pageIndex)=>{
     return (dispatch) => {
-        let dataAfterPaging =[];
+        const pageSize = 3;
+        // const pageIndex = 1;
         let url = `${API_URL_PRODUCT_LIST}`
         //nếu có lấy sp theo id thì sẽ show theo
         if(categoryId){
             url = url+`?categoryId=${categoryId}`
         }
         callApi(url,'GET', null).then(res => {
-            const dataAfterPaging = res.data.slice((pageIndex -1)*pageSize, pageIndex*pageSize)
-            let totalPage = res.data.length/pageSize
-            dispatch(actGetProductPageList(res.data))
+            const dataAfterPaging = res.data.slice(pageIndex*pageSize,((pageIndex+1)*pageSize))
+            const totalPage = res.data.length/pageSize
+            console.log("page index", pageIndex)
+             console.log("dataAfterPaging",dataAfterPaging)
+             console.log("totalPage ",totalPage)
+            dispatch(actGetProductPageList(dataAfterPaging,totalPage))
         })
     }
 }
-export const actGetProductPageList=(data, totalPage)=>{
+export const actGetProductPageList=(dataAfterPaging,totalPage)=>{
     return {
         type: Types.GET_PRODUCT_PAGE_LIST,
-        dataOfProductPageList: data,
-        totalPage : totalPage
+        dataAfterPaging:dataAfterPaging,
+        totalPage:totalPage
     }
 }
 
@@ -48,7 +52,8 @@ const productPageReducer = (state=initialState, action) =>{
     if(action!==undefined){
         switch(action.type){
             case Types.GET_PRODUCT_PAGE_LIST:
-                return {...state, dataproducts: action.dataOfProductPageList,totalPage: action.totalPage}
+                console.log('in ra con TO',state,action)
+                return {...state, dataproducts: action.dataAfterPaging,totalPage: action.totalPage}
             case Types.GET_PRODUCT_DETAIL:
                 return {...state, dataDetail: action.dataOfProductDetail}
             default: 
