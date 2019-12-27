@@ -4,6 +4,7 @@ import {API_URL_PRODUCT_LIST} from '../constants/config';
 
 // PRODUCT LIST 
 //tao hàm
+// action 1: gọi lên server lấy dữ liệu về
 export const actGetProductPageListRequest =(categoryId, pageIndex)=>{
     return (dispatch) => {
         const pageSize = 3;
@@ -15,19 +16,19 @@ export const actGetProductPageListRequest =(categoryId, pageIndex)=>{
         }
         callApi(url,'GET', null).then(res => {
             const dataAfterPaging = res.data.slice(pageIndex*pageSize,((pageIndex+1)*pageSize))
-            const totalPage = res.data.length/pageSize
-            console.log("page index", pageIndex)
-             console.log("dataAfterPaging",dataAfterPaging)
-             console.log("totalPage ",totalPage)
+            const totalPage = Math.ceil(res.data.length/pageSize)
+            // console.log("page index", pageIndex)
+            // gọi api xong có data mới dispatch action
             dispatch(actGetProductPageList(dataAfterPaging,totalPage))
         })
     }
 }
+// action2 : lấy dữa liệu sau khi gọi lên server để lưu vào store
 export const actGetProductPageList=(dataAfterPaging,totalPage)=>{
     return {
         type: Types.GET_PRODUCT_PAGE_LIST,
         dataAfterPaging:dataAfterPaging,
-        totalPage:totalPage
+        totalPage:totalPage,
     }
 }
 

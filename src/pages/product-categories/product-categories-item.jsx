@@ -7,7 +7,7 @@ class ProductCategoriesItem extends React.Component {
       <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <button className="product-categories-item"
         //lấy props này trực tiếp trong product-page-reducer
-          onClick={()=> this.props.getProductPageListFromStore(category.categoryId)}
+          onClick={()=> this.props.getProductPageListFromStore(category.categoryId,0)}
         >
              <img className="img-responsive" src={category.image}/>
              <div>

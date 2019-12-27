@@ -53,8 +53,8 @@ const mapDispatchToProps = (dispatch, props) =>{
         getProductCategoriesFromStore:()=>{
             dispatch(actGetProductCategoriesRequest()
         )},
-        getProductPageListFromStore:(categoryId)=> {
-            dispatch(actGetProductPageListRequest(categoryId))
+        getProductPageListFromStore:(categoryId, pageIndex)=> {
+            dispatch(actGetProductPageListRequest(categoryId, pageIndex))
         }
     }
 }

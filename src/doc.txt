@@ -1,5 +1,10 @@
 - Redux hỗ trợ chuyển các state của store thành các props
  của component
+- mapStateToProps : lấy từ store
+- mapDispatchoProps : lưu lên store
+
+// action 1: gọi lên server lấy dữ liệu về(request gọi API)
+// action2 : lấy dữa liệu sau khi gọi lên server để lưu vào store
 
 pages:
     home
