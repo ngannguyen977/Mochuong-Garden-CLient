@@ -1,7 +1,9 @@
 import React from 'react';
 import * as MSG from '../../constants/message';
 import CartItem from './shopping-cart-item';
+
 // import CartResult from './cartResult';
+import {BrowserRouter, Route, Link } from 'react-router-dom';
 import ProductsPageContainer from '../product-page/product-page-container';
 
 class ShoppingCart extends React.Component {
@@ -10,6 +12,9 @@ class ShoppingCart extends React.Component {
 	var { cart } = this.props;
     return (
         <div className="cart-page">
+			<div className="title-status">
+				<h3>Thông tin giỏ hàng</h3>
+			</div>
 			<div className="container">
 				<table className="table table-content">
 					<thead>
@@ -42,9 +47,11 @@ class ShoppingCart extends React.Component {
 								<strong className="txt-price">{this.showAllTotal(cart)}</strong>
 							</td>
 							<td>
+							<Link to={'/payment'}>
 								<button type="submit" className="btn-cart">
-									Mua hàng
+										Mua hàng
 								</button>
+							</Link>
 							</td>
 						</tr>
 					</tbody>

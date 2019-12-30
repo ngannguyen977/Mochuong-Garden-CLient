@@ -6,6 +6,7 @@ import { actGetProductPageListRequest } from '../product-page-reducer';
 
 const mapStateToProps = state =>{
     return {
+        // state : map từ state trên store
         products:state.productPageReducer.dataproducts,
         totalPage:state.productPageReducer.totalPage
     }

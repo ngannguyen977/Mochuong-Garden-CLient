@@ -6,6 +6,7 @@ import Products from './pages/products/products';
 import ProductsContainer from './pages/products/products-container';
 import ProductActions from './pages/product-actions/productAddPage';
 import ShoppingCartRoute from './pages/shopping-cart/shopping-cart-container';
+import Payment from './pages/shopping-cart/payment';
 import ProductDetailContainer from './pages/product-detail/product-detail-container';
 
 const routes = [
@@ -18,6 +19,11 @@ const routes = [
         path: '/products',
         exact: false,
         main:({match}) =><ProductsContainer match={match}/>
+    },
+    {
+        path: '/payment',
+        exact: false,
+        main:({match}) =><Payment match={match}/>
     },
     {
         path: '/cart',
