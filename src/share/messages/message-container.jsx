@@ -1,7 +1,6 @@
 import {connect} from 'react-redux';
 import MessageComponent from './message';
 // import ProductDetail from '../../pages/product-detail/product-detail';
-import actAddMessage from './message-reducer';
 import "./message.scss";
 
 const mapStateToProps = state =>{

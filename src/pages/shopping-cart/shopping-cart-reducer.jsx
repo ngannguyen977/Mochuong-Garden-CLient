@@ -56,6 +56,7 @@ const CartReducer = (state=initialState, action) =>{
         return [...state];
 
         case Types.DELETE_PRODUCT_CART:
+            // state chính là product
             index = findProductInCart(state, product);
                 if(index !==-1){
                     state.splice(index, 1)

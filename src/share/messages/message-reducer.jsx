@@ -8,7 +8,12 @@ export const actAddMessage =(message)=>{
         message
     }
 } 
-
+export const actDeleteMessage = (message)=>{
+    return{
+        type:Message.MSG_CONFIRM,
+        message
+    }
+}
 var initialState = "";
 const MessageReducer = (state=initialState, action)=> {
  switch(action.type){
@@ -16,6 +21,10 @@ const MessageReducer = (state=initialState, action)=> {
         console.log("meassage", action)
         //trong action có
         return  action.message
+    case Message.MSG_CONFIRM:
+        console.log("meassage delete", Message)
+        return action.message
+        
     default: return state;
  }
 

@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import './shopping-cart.css';
+import * as Message from '../../constants/message';
+import MessageContainer from '../../share/messages/message-container';
+import './shopping-cart.scss';
 
 class CartItem extends Component {
+    onShowConfirmMessage=(message)=>{
+        this.props.onConfirmDelete(message);
+    }
+    
     render() {
-        var {product} = this.props;
+        var {product, message} = this.props;
         var{quantity} = product;
         console.log("cart item", product)
         return (
@@ -41,6 +47,7 @@ class CartItem extends Component {
                             </button>
                         </div>
                     </td>
+                    <MessageContainer />
                 </tr>
         );
     }
@@ -48,10 +55,12 @@ class CartItem extends Component {
     showTotal = (price, quantity)=>{
         return price * quantity
     }
-    onDeleteCart = (product)=>{
+    onDeleteCart = (product, message)=>{
         console.log("click xóa", product)
-        var {onDeleteProductInCart} = this.props;
-        onDeleteProductInCart(product)
+        // var {onDeleteProductInCart, onShowConfirmMessage} = this.props;
+        this.props.onDeleteProductInCart(product)
+        this.onShowConfirmMessage(Message.MSG_CONFIRM)
+        // or this.props.onDeleteProductInCart(product)
     }
     onUpdateQuantity=(product, quantity)=>{
         var {onUpdateProductQuantity} = this.props

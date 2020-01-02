@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import ShoppingCart from './shopping-cart';
 import CartItem from './shopping-cart-item';
 import { actUpdateQuantity, actDeleteInCart } from './shopping-cart-reducer'
+import {actDeleteMessage} from '../../share/messages/message-reducer'
 // import { actGetProductPageListRequest } from '../product-page-reducer';
 import Menu from "../../share/menu/menu";
 
@@ -35,11 +36,14 @@ const mapDispatchToProps = (dispatch, props) => {
   return {
     //action trong reducer có tham số là product
     //tại đây cũng truyền ts là product
-    // chuyền props onDeleteProductInCart có ts product
+    // chuyền props onDeleteProductInCart có ts product để xđ product nào sẽ xóa
     // cho cartItem nơi chứa nút delete tại phương thức onDeleteCart()
     onDeleteProductInCart: (product) => {
       //dispatch action có ts là product
       dispatch(actDeleteInCart(product))
+    },
+    onConfirmDelete: (message)=>{
+      dispatch(actDeleteMessage(message))
     },
     onUpdateProductQuantity: (product, quantity) => {
       dispatch(actUpdateQuantity(product, quantity))
