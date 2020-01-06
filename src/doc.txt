@@ -59,3 +59,8 @@ thì khi mình click vào 1 cate
 mình sẽ lấy được id của cate đang click đó
 dựa vào id của cate đó,
 mình lọc ra những product nào có categoryID = cái id mình đang click được
+///////////////////////////////////////////
+sửa sp:
+click vào sp sẽ hiện link URL trên trình duyệt => lấy id xuống
+dựa vào id này gọi lên serer để xác định được sp nào đang edit
+=> set vào state và đổ dl ra form=> người dùng tiến hành cập nhật chỉnh sửa
