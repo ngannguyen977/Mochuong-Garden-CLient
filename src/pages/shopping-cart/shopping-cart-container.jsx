@@ -42,8 +42,11 @@ const mapDispatchToProps = (dispatch, props) => {
       //dispatch action có ts là product
       dispatch(actDeleteInCart(product))
     },
-    onConfirmDelete: (message)=>{
+    onConfirmDelete:(message)=>{
       dispatch(actDeleteMessage(message))
+      setTimeout(() => {
+          dispatch(actDeleteMessage(""))
+      },5000)// run this func after 2 seconds
     },
     onUpdateProductQuantity: (product, quantity) => {
       dispatch(actUpdateQuantity(product, quantity))
