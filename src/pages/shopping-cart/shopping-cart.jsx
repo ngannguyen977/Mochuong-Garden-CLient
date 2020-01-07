@@ -5,6 +5,8 @@ import CartItem from './shopping-cart-item';
 // import CartResult from './cartResult';
 import {BrowserRouter, Route, Link } from 'react-router-dom';
 import ProductsPageContainer from '../product-page/product-page-container';
+import ShoppingCartContainer from '../shopping-cart/shopping-cart-container';
+import MessageContainer from '../../share/messages/message-container'
 
 class ShoppingCart extends React.Component {
   render(){
@@ -57,7 +59,9 @@ class ShoppingCart extends React.Component {
 					</tbody>
 				</table>
 			</div>
+			<MessageContainer />
         </div>
+		
     );
   }
   showAllTotal=(cart)=>{
@@ -77,16 +81,13 @@ class ShoppingCart extends React.Component {
 	if(cart.length>0){
 		result = cart.map((item, index)=>{
 			return (
-
-				<CartItem
+				<ShoppingCartContainer.CartItemContainer
 					key={index}
 					index={index}
 					product={item}
 					onDeleteProductInCart={onDeleteProductInCart}
 					onUpdateProductQuantity={onUpdateProductQuantity}
-					>
-				</CartItem>
-
+					/>
 			)
 		})
 	}

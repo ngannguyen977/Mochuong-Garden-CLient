@@ -8,6 +8,8 @@ class MessageComponent extends Component {
             <div className="message-wrapper">
               {message   && (<h3>
                     <i className="icon-check fas fa-check"></i>
+                    <button>Hủy bỏ</button>
+                    <button>Đồng ý</button>
                 {message}</h3>)}
             </div>
             

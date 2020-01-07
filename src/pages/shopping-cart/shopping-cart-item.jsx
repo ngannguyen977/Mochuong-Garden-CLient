@@ -47,7 +47,7 @@ class CartItem extends Component {
                             </button>
                         </div>
                     </td>
-                    <MessageContainer />
+                   
                 </tr>
         );
     }
