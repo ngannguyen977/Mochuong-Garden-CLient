@@ -68,5 +68,5 @@ click vào sp sẽ hiện link URL trên trình duyệt => lấy id xuống(
 dựa vào id này gọi lên serer(api) để xác định được sp nào đang edit
 => set vào state và đổ dl ra form=> người dùng tiến hành cập nhật chỉnh sửa
 ///////////////////////////
-mapDispatchoProps: lấy trên api luu store
+mapDispatchToProps: lấy trên api luu store
 mapStateToProps : lấy dữ liệu và render ra

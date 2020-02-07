@@ -31,9 +31,7 @@ const MenuLink = ({label,to, acticOnlyWhenExact})=>{
 			var active = match ? 'active' :'';
 			return (
 				<li className ={active}>
-					<Link to={to}>
-						{label}
-					</Link>
+					<Link to={to}>{label}</Link>
 				</li>
 			)
 		}}

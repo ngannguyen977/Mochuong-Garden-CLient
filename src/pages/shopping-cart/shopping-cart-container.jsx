@@ -51,9 +51,10 @@ const mapDispatchToProps = (dispatch, props) => {
     onUpdateProductQuantity: (product, quantity) => {
       dispatch(actUpdateQuantity(product, quantity))
     },
-    showAllQuantity: (cart) => showAllQuantity(cart)
-
+    showAllQuantity: (cart) => {showAllQuantity(cart)
+    // or  showAllQuantity: (cart) => {dispatch(showAllQuantity(cart))}
   }
+}
 }
 export default {
   CartItemContainer: connect(mapStateToProps, mapDispatchToProps)(CartItem),
